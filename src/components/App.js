@@ -13,7 +13,7 @@ const App = () => {
                 }
                 return Math.min(c+10, 100);
             })
-        },500)
+        },1000)
       
         return ()=>clearInterval(interval)
     },[])
