@@ -7,14 +7,15 @@ const App = () => {
     useEffect(()=>{
         const interval= setInterval(()=>{
             setCount((c)=>{
-                if(c>99){
-                console.log("clearInterval(interval)")
+                if(c>=100){
                     clearInterval(interval) 
-                    
+                    return c
                 }
                 return c+1;
             })
         },1000)
+      
+        return ()=>clearInterval(interval)
     },[])
   return (
     <div>
