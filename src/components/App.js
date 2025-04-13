@@ -11,9 +11,9 @@ const App = () => {
                     clearInterval(interval) 
                     return c
                 }
-                return c+1;
+                return Math.min(c+10, 100);
             })
-        },1000)
+        },500)
       
         return ()=>clearInterval(interval)
     },[])
